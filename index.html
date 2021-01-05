@@ -1,29 +1,253 @@
 <!DOCTYPE html>
-<!-- HOMEPAGE -->
 <html>
-    <head></head>
-    <body>
-    <!-- START HEADER -->
-    <header>
-        <img src="#" alt="profile picture">
-        <p>Denis Laesker</p>
-    </header>
-    <!-- END HEADER -->
-    <!-- START NAV -->
-    <nav>
-        <ul>
-            <li class="navbar" id="active">Home</li>
-            <li class="navbar">About</li>
-            <li class="navbar">Teaching</li>
-            <li class="navbar">Projects</li>
-        </ul>
-    </nav>
-    <!-- END NAV -->
-    <!-- START MAIN -->
-    <main></main>
-    <!-- END MAIN -->
-    <!-- START FOOTER -->
-    <footer></footer>
-    <!-- END FOOTER -->
-    </body>
+<head>
+<title>Denis Laesker - Ph.D. Student | CS | BCI | Sound Health</title>
+<meta charset="UTF-8">
+<meta name="description" content="Personal website of Denis Laesker, a Ph.D. student at the University of South Florida.">
+<meta name="author" content="Denis Laesker">
+<style>
+body {margin: 0; padding: 0; width: 100%; height: 100%; background-color: black;}
+body {font-family: Georgia, Helvetica, serif;}
+
+/* HELPER CLASSES */
+
+.sectionCommon {padding: 2em 6em; overflow-wrap: break-word; font-size: 20px;}
+.figCaption {font-size: 16px; margin-top: 1em;}
+
+/* END HELPER CLASSES */
+
+    
+#navbar, #content-wrapper {position: absolute;}
+
+/* NAVBAR */
+
+#navbar {
+    left: 0; min-height: 100%; background-color: black; min-width: 14em; color: white;
+}
+
+#navbar #navWelcome {position: absolute; top: 0; width: 100%; background-color: ; text-align: center; margin: 0; padding: 0; min-height: 1em;}
+
+#navbar #navWelcome h3 { margin: 0; padding: .5em 0;}
+
+#navbar #menu {
+    width: 100%; position: absolute;
+    right: 0; top: 2.5em; bottom: 6em;
+    overflow: scroll;
+}
+
+#navbar #menu ul {list-style-type: none; margin: 0; padding: 0; text-align: center;}
+#navbar #menu ul a {
+    font-size: 20px;
+    display: block; padding: .5em 0; text-decoration: none; color: lightgray;
+}
+
+#navbar #menu ul a:hover {background-color: darkslategray;}
+
+#navbar #navbarLogo {position: absolute; bottom: 0; min-height: 4em; width: 100%; margin: 0; padding: .5em 0; text-align: center;}
+
+#navbarLogoMobile {display: none;}
+
+#navbar #navbarLogo h1 {margin: 0; padding: 0; margin-bottom: .5em;}
+
+/* END NAVBAR */
+
+/* CONTENT */
+
+#content-wrapper {
+    left: 14em; height: 100%;
+    right: 0;
+    overflow: scroll;
+    background-color:white;
+    color: black;
+}
+
+#graduationImg {
+    border-radius: 50%; display: block; margin: 0 auto; border: .25em solid black;
+}
+
+#intro .Quotes {text-align: center; padding: 0;}
+
+#intro p {padding: 0; text-align: justify;}
+
+#intro #downloadCV {text-align: center;}
+
+#contact img {margin: 0;}
+#contact #soundWave {margin: 0;}
+
+#education, #publications, #contact
+{text-align: center; padding: 0; margin: 0;}
+
+#contact h2, #education h2, #publications h2
+{margin-top: 0; padding: 0;}
+
+#education p, #publications p
+{text-align: justify; padding: 0 2em;}
+
+#education table { margin: 0 auto; text-align: left;}
+#education table td {font-size: 20px;}
+
+/* END CONTENT */
+
+/* FOOTER */
+
+#footer {text-align: center;}
+#footer p {padding: 0; margin: 0; margin-top: 2.5em;}
+
+/* END FOOTER */
+
+#soundWave {margin: 0; padding: 0;}
+
+
+/* MOBILE */
+
+#menuMobile {display: none;}
+
+@media only screen and (max-width: 1000px) {
+    * p, .Quotes {font-size: 16px;}
+            
+    #navbar {position: static; margin: 0; padding: 0; background-color: ;}
+        
+    #menu {display: none;}
+    
+    /* #menu {max-height: 2em; position: static;} */
+    #content-wrapper {position:static; margin-top: em; background-color: ; overflow: none;}
+    
+    #navWelcome, #navbarLogo {display: none;}
+    
+    #navbarLogoMobile {display: block; text-align: center;}
+    #navbarLogoMobile h1 {display: ; padding: 0;}
+    #navbar #navWelcome {display: none;}
+        
+    #intro {padding: 0 2em; margin: 0;}
+    #intro .Quotes {text-align: center; padding: 0; margin: 0;}
+    
+    #education table td {font-size: 16px;}
+    #firstMobileMenuBtn {display: block;}
+    #firstNonMobileMenuBtn {display: none;}
+    #graduationImg {width: 50%; height:50%; margin-top: 6em;}
+    #wearingEEGCap {width: 50%; height:50%;}
+    
+    #soundWave {height: 4em; margin: 0;}
+    
+    #menuMobile {display: block; position: fixed; left: .5em; min-height: 3em; max-height: 3em; overflow: scroll; top: .5em;}
+    #navbar #menuMobile ul {list-style-type: none; margin: 0; padding: 0;}
+    #navbar #menuMobile ul a {
+        font-size: 20px; text-align: center;
+        display: block; padding: .5em .5em; text-decoration: none; color: darkgray;
+    }
+    
+    #navbar #menuMobile ul a:hover {color: lightgray; background-color: black;}
+    
+}
+/* END MOBILE */
+</style>
+</head>
+
+
+<body>
+<div id="wrapper">
+    <div id="navbar" class="">
+        <div id="navWelcome"><h3>Welcome</h3></div>
+        <div id="navbarLogoMobile"><h1>Denis Laesker</h1></div>
+        <div id="menu">
+            <ul>
+                <li><a href="#graduationImg">Intro</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </div>
+        
+        <div id="menuMobile">
+            <ul>
+                <li><a href="#graduationImg">Intro&#8595;</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </div>
+        <div id="navbarLogo"><h1>Denis<br>Laesker</h1></div>
+    </div>
+    
+    <div id="content-wrapper" class="">
+        <div id="intro" class="sectionCommon">
+            <img id="graduationImg" src="me.jpg" width="30%" height="30%">
+                
+            <figure class="Quotes">
+                <blockquote>"Perseverance is a virtue of the less brilliant."</blockquote>
+                <figcaption>-Santiago Ramón y Cajal</figcaption>
+            </figure>
+    
+            <figure class="Quotes">
+                <blockquote>"Simplicity is the final achievement. After one has played a vast quantity of notes and more notes, it is simplicity that emerges as the crowning reward of art."</blockquote>
+                <figcaption>-Frédéric Chopin</figcaption>
+            </figure>
+            
+            <p>Hello. In case you missed it, my name is <b>Denis Laesker</b>. I am a Ph.D. student in the <a href="https://www.usf.edu/engineering/cse/">Department of Computer Science and Engineering</a> at the University of South Florida, Tampa, Florida, where I also earned a B.Sc. in Computer Science. I am a scientist and researcher, as well as an engineer, an educator, and the amateur musician. I am passionate about teaching, music, and learning languages. Thus, it is not surprising that I am an aspiring professor; or an amateur musician and polyglot, for that matter. </p>
+                            
+            <p>I currently work as a researcher at the <a href="https://www.neurosymbiosis.com" target="_blank">Neuro-Machine Interaction Lab (NMIL)</a> under my Ph.D. advisor, and lab-coordinator, <a href="https://www.marvinandujar.com#comp-imwf9usp" target="_blank">Dr. Marvin Andujar</a>. In the NMIL, you will more than often see me wearing funny looking hats that record brain electrical activity, or Electroencephalography (EEG), like the one I am wearing in Fig. 1. You should check out the lab's website (link above) to see what we are currently working on! For now, let me just say that my work in the lab involves the development of Brain-Computer Interface (BCI) applications.</p>
+            
+            <figure style="text-align: center;">
+                <img id="wearingEEGCap" src="wearingEEGCap.jpeg" width="25%" height="25%"></img>
+                <figcaption class="figCaption">Fig. 1: Bearded man wearing an EEG cap.</figcaption>
+            </figure>
+            
+            <p>I am interested in a wide variety of topics, some of which include music, languages, computer science, BCI, neuroscience, physics, mathematics, cognitive psychology, digital signal processing. As a researcher and scientist, however, my current research interests lie in expanding the knowledge and understanding of how sound, music, and speech recruit intricate circuitry in the brain and the potential for music as therapy for neurological disorders. As an engineer, I would like to develop tools for the benefit of musicians and non-musicians alike. Lastly, as an educator, I want to contribute to the success of future computer scientists and engineers, as well as to promote STEM education to people from underrepresented communities.</p>
+                            
+            <p id="downloadCV"><a href="#">Click here to download a copy of my CV</a>
+        </div>
+        
+        <img id="soundWave" src="Swave.png" width="100%;" height="10%;"></img>
+        <div id="contact" class="sectionCommon">
+            <h2>Contact</h2>
+            <a href="https://www.linkedin.com/in/denis-laesker-73b169123/" target="_blank">
+                <img src="linkedin.png" width="80px;" height="80px;"></img></a>
+            
+            <a href="mailto:dlaesker@usf.edu">
+                <img src="email.png" width="80px;" height="80px;"></img></a>
+        </div>
+        
+        <img id="soundWave" src="Swave.png" width="100%;" height="10%;"></img>
+        <div id="education" class="sectionCommon">
+            <h2>Education</h2>
+            <table cellspacing="20px;">
+                <tr>
+                    <td><b>Ph.D.</b>, Computer Science and Engineering, University of South Florida, Tampa, FL</td>
+                    <td>Expected: 12/2023</td>
+                </tr>
+                <tr>
+                    <td><b>B.S.</b>, (Magna Cum Laude), Computer Science, University of South Florida, Tampa, FL</td>
+                    <td>12/2018</td>
+                </tr>
+                <tr>
+                    <td><b>A.A.</b>, Liberal Arts with Science Emphasis, Hillsborough Community College</td>
+                    <td>05/2014</td>
+                </tr>
+            </table>
+        </div>
+        <img id="soundWave" src="Swave.png" width="100%;" height="10%;"></img>
+        
+        <div id="publications" class="sectionCommon">
+            <h2>Publications</h2>
+            <p>Tezza, D., Caprio, D., Garcia, S., Pinto, B., <b>Laesker, D.</b>, & Andujar, M. (2020, July). Brain-Controlled Drone Racing Game: A Qualitative Analysis. In International Conference on Human-Computer Interaction (pp. 350-360). Springer, Cham.</p>
+            
+            <p>Tezza, D., Caprio, <b>D., Laesker</b>, D., & Andujar, M. (2020). Let's Fly! An Analysis of Flying FPV Drones Through an Online Survey. In iHDI@ CHI.</p>
+            
+            <p>Pinto, B., <b>Laesker, D.</b>, Garcia, S., Caprio, D., Tezza, D., & Andujar, M. (2020) Design Guidelines for Artistic Immersive BCI applications. Paper accepted at 22nd International Conference on Human-Computer Interaction, 2020, Denmark.</p>
+            
+            <p>Garcia, S., <b>Laesker, D.</b>, Caprio, D., Kauer, R., Nguyen, J., & Andujar, M. (2019, July). An Immersive Virtual Reality Experience for Learning Spanish. In International Conference on Human-Computer Interaction (pp. 151-161). Springer, Cham.</p>
+            
+            <p>McClinton, W., Caprio, D., <b>Laesker, D.</b>, Pinto, B., Garcia, S., and Andujar, M. 2019. P300-Based 3D Brain Painting in Virtual Reality. In Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems (CHI EA '19). ACM, New York, NY, USA, Paper LBW1119, 6 pages</p>
+            
+            <p>Garcia, S., Kauer, R., <b>Laesker, D.</b>, Nguyen, J., and Andujar, M. 2019. A Virtual Reality Experience for Learning Languages. In Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems (CHI EA '19). ACM, New York, NY, USA, Paper INT039, 4 pages.</p>
+            
+        </div>
+        <img id="soundWave" src="Swave.png" width="100%;" height="10%;"></img>
+        
+        <div id="footer" class="sectionCommon">
+            <hr><p><b>&#169 2020 Denis Laesker</b></p>
+        </div>
+    </div>
+</div>
+</body>
 </html>
